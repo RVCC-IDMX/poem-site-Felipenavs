@@ -1,16 +1,52 @@
-/* home */
-@use "../abstracts/variables" as var;
-@use "../base/typography" as type;
-
-body {
-  font-family: type.$font;
-  background-color: var.$bg-very-light;
-  width: min(100% - 2rem, 60ch);
+.poem-wrapper{
+  display: grid;
+  grid-template-columns: auto;
+  width: min(100%, 900px);
   margin-inline: auto;
-  margin-block: 4rem;
+  font-size: clamp(.1rem, .2rem + 1.5vw, 1rem);
+
 }
 
-h1 {
-  color: var.$primary-color;
-  text-align: center;
+.poem-hero {
+  padding: 2% 5%;
+  background-color: antiquewhite;
+}
+.poem-foto {
+  width: fit-content;
+}
+
+.poem{
+  font-family: 'Josefin Slab', serif;
+  color: rgb(65, 19, 22);
+  background-color: antiquewhite;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.poem-header{
+  background-color: rgb(65, 19, 22);
+  color: antiquewhite;
+}
+
+.poem-header-layout {
+  display: grid;
+  grid-template-columns: auto;
+  /* padding: 2% 30%; */
+  padding: 2% clamp(2%, 30%, 400px);
+  margin-inline: auto;
+
+}
+
+.poem-header h1 {
+  font-family: 'Fredericka the Great';
+  font-size: clamp(.8rem, 1rem + 2.5vw, 4rem);
+}
+
+.poem-text{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 4vh;
+  padding: 5% 0%;
+  font-size: clamp(.05em, .7rem + 1.5vw, 1.5rem);
+  justify-content: center;
 }
